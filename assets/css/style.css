@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #00024D;
+    --light-accent-color: #00024D;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --linear-gradient: linear-gradient(0deg, #000000 100%, #00024D 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
