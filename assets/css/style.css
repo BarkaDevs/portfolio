@@ -64,6 +64,25 @@ body {
   margin-left: 100px;
 }
 
+.navbar-toggler {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-toggler img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-nav {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar-nav.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
 .navbar-nav {
   list-style: none;
   display: flex;
@@ -186,6 +205,27 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 9;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-toggler img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+
   .navbar {
     padding: 0.5rem;
   }
@@ -231,11 +271,14 @@ body {
   }
 
   .tagline {
-    padding: 4rem 1rem;
+    padding: 4rem 5rem;
+    position: relative;
+    top: 120px;
   }
 
   .tagline p {
     font-size: 20px;
+    text-align: center;
   }
 
   .header-image {
@@ -371,25 +414,32 @@ body {
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease,
+    box-shadow 0.3s ease;
+  transform-origin: center;
 }
 
+.team-member:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px 5px rgba(0, 85, 179, 0.5);
+}
 .team-member img {
-  width: 80%; /* Reduced from 100% to create space around the image */
-  height: 80%; /* Reduced from 100% to create space around the image */
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   position: absolute;
-  bottom: 0; /* Position at bottom */
-  left: 60%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
+  bottom: 0;
+  left: 60%;
+  transform: translateX(-50%);
 }
 
 .member-info {
   position: absolute;
-  top: 1rem; /* Moved to top */
-  left: 1rem; /* Left aligned */
+  top: 1rem;
+  left: 1rem;
   color: white;
   text-align: left;
-  z-index: 2; /* Ensure text appears above image */
+  z-index: 2;
 }
 
 .member-info h3 {
