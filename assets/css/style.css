@@ -15,6 +15,24 @@
   --linear-gradient: linear-gradient(0deg, #00024d 0%, #000000 100%);
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--light-color);
