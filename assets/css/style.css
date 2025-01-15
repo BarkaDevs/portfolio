@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 
 :root {
   --primary-color: #00024d;
+  --secondary-color: #f8f9fd;
   --light-accent-color: #00024d;
   --light-color: #ffffff;
   --dark-color: #000000;
@@ -31,6 +33,7 @@ body {
   left: 0;
   z-index: 10;
 }
+
 .navbar-brand {
   color: #fff;
   text-decoration: none;
@@ -129,6 +132,100 @@ body {
   object-fit: contain;
 }
 
+/* Responsive Design for Navbar */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+
+  .nav-item.btn-item {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    padding: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Responsive Design for Home Section */
+@media (max-width: 1024px) {
+  .home {
+    padding: 2rem;
+  }
+
+  .tagline {
+    padding: 6rem 1rem;
+  }
+
+  .tagline p {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .header-image {
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+
+  .tagline {
+    padding: 4rem 1rem;
+  }
+
+  .tagline p {
+    font-size: 20px;
+  }
+
+  .header-image {
+    position: static;
+    width: 100%;
+  }
+}
+
 /* ABOUT STYLE */
 .about {
   display: flex;
@@ -136,7 +233,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 6rem;
-  min-height: 600px; /* Set minimum height for the container */
+  min-height: 500px; /* Set minimum height for the container */
 }
 
 .left-section {
@@ -224,5 +321,101 @@ body {
 
   .sub-title {
     font-size: 1.5rem;
+  }
+}
+
+/* TEAM */
+.team {
+  background: var(--secondary-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--light-accent-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.team-member {
+  background: var(--linear-gradient);
+  border-radius: 1rem;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member img {
+  width: 80%; /* Reduced from 100% to create space around the image */
+  height: 80%; /* Reduced from 100% to create space around the image */
+  object-fit: cover;
+  position: absolute;
+  bottom: 0; /* Position at bottom */
+  left: 60%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.member-info {
+  position: absolute;
+  top: 1rem; /* Moved to top */
+  left: 1rem; /* Left aligned */
+  color: white;
+  text-align: left;
+  z-index: 2; /* Ensure text appears above image */
+}
+
+.member-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.member-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.see-more-btn {
+  background-color: #000033;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Responsive styles remain the same */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .team h2 {
+    font-size: 2rem;
   }
 }
