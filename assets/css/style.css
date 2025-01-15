@@ -428,8 +428,8 @@ body {
   height: 80%;
   object-fit: cover;
   position: absolute;
-  bottom: 0;
-  left: 60%;
+  bottom: 0px;
+  left: 70%;
   transform: translateX(-50%);
 }
 
@@ -454,15 +454,51 @@ body {
   opacity: 0.8;
 }
 
+.team-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.join-us-btn,
 .see-more-btn {
-  background-color: #000033;
+  background-color: var(--light-accent-color);
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  width: 200px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
   border-radius: 2rem;
-  margin-top: 2.5rem;
   cursor: pointer;
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.join-us-btn img.swag,
+.see-more-btn img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+.join-us-btn:hover,
+.see-more-btn:hover {
+  background-color: #003d80;
+}
+.see-more-btn {
+  background-color: var(--light-accent-color);
+  color: white;
+  border: none;
+  padding: 0.3rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
 /* Responsive styles remain the same */

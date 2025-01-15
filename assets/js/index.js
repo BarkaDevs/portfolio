@@ -9,4 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
         openIcon.style.display = nav.classList.contains('show') ? 'none' : 'block';
         closeIcon.style.display = nav.classList.contains('show') ? 'block' : 'none';
     });
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const teamMembers = document.querySelectorAll('.team-member');
+    const seeMoreBtn = document.querySelector('.see-more-btn');
+    if (teamMembers.length === 8) {
+        seeMoreBtn.style.display = 'block';
+    } else {
+        seeMoreBtn.style.display = 'none';
+    }
 });
