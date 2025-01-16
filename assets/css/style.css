@@ -711,8 +711,7 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   position: relative;
-  top: 0;
-  bottom: 0;
+  top: 10px;
   width: 50%;
   text-align: left;
 }
