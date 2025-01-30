@@ -914,3 +914,136 @@ body {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
+
+.project {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.project-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-container-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.project-container {
+  min-width: 100%;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+.project-container.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slider Controls */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.slider-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.slider-button:hover {
+  background: #003d80;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background: #333;
+}
+
+.project .tech-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project .tech-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Design for Project Section */
+@media (max-width: 1024px) {
+  .project-container {
+    flex-direction: column;
+    max-height: none;
+    gap: 2rem;
+    border-radius: 20px;
+  }
+
+  .project-image img {
+    height: auto;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .project .left-section {
+    padding: 2rem;
+    margin-top: 0;
+    gap: 1rem;
+  }
+
+  .project .bottom-section {
+    height: auto;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    padding: 1rem;
+  }
+
+  .project h2 {
+    font-size: 2rem;
+  }
+
+  #project-title {
+    font-size: 2rem;
+  }
+
+  .project .left-section {
+    padding: 1rem;
+  }
+
+  .project-image img {
+    height: auto;
+    margin-top: 0;
+  }
+}
