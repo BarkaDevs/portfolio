@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Navbar functionality
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarNav = document.querySelector('.navbar-nav');
     const openIcon = document.querySelector('.open-icon');
@@ -9,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         openIcon.style.display = openIcon.style.display === 'none' ? 'block' : 'none';
         closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
+    // Team members functionality
     const teamMembers = document.querySelectorAll('.team-member');
     const seeMoreBtn = document.querySelector('.see-more-btn');
     if (teamMembers.length === 8) {
@@ -19,21 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         seeMoreBtn.style.display = 'none';
     }
-});
 
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Wrap existing project containers in a slider wrapper
+    // Project slider functionality
     const projectSection = document.querySelector('.project');
     const projectContainers = document.querySelectorAll('.project-container');
+
+    if (!projectContainers.length) return;
 
     // Create wrapper for sliding functionality
     const wrapper = document.createElement('div');
@@ -56,10 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.createElement('button');
     prevButton.className = 'slider-button prev';
     prevButton.textContent = '←';
+    prevButton.setAttribute('aria-label', 'Previous project');
 
     const nextButton = document.createElement('button');
     nextButton.className = 'slider-button next';
     nextButton.textContent = '→';
+    nextButton.setAttribute('aria-label', 'Next project');
 
     controls.appendChild(prevButton);
     controls.appendChild(nextButton);
@@ -71,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
     projectContainers.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.className = 'dot' + (index === 0 ? ' active' : '');
+        dot.setAttribute('role', 'button');
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
         dots.appendChild(dot);
     });
 
@@ -78,12 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapper.appendChild(dots);
 
     // Insert everything after the title
-    const title = projectSection.querySelector('.title');
+    const title = projectSection.querySelector('h2') || projectSection.firstElementChild;
     title.after(wrapper);
 
     // Slider functionality
     let currentSlide = 0;
     const totalSlides = projectContainers.length;
+    let autoSlideInterval;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isDragging = false;
 
     // Show initial slide
     projectContainers[0].classList.add('active');
@@ -106,13 +105,74 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.dot')[currentSlide].classList.add('active');
     }
 
+    function startAutoSlide() {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(() => {
+            updateSlide('next');
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    }
+
+    // Touch Events
+    containerWrapper.addEventListener('touchstart', (e) => {
+        stopAutoSlide();
+        touchStartX = e.touches[0].clientX;
+        isDragging = true;
+        containerWrapper.style.transition = 'none';
+    }, { passive: true });
+
+    containerWrapper.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        touchEndX = e.touches[0].clientX;
+        const diff = touchStartX - touchEndX;
+        const moveX = -(currentSlide * 100 + (diff / wrapper.offsetWidth) * 100);
+        containerWrapper.style.transform = `translateX(${moveX}%)`;
+    }, { passive: true });
+
+    containerWrapper.addEventListener('touchend', () => {
+        isDragging = false;
+        containerWrapper.style.transition = 'transform 0.5s ease-in-out';
+
+        const diff = touchStartX - touchEndX;
+        const threshold = 50; // minimum distance for swipe
+
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                updateSlide('next');
+            } else {
+                updateSlide('prev');
+            }
+        } else {
+            // Return to current slide if swipe wasn't long enough
+            containerWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        startAutoSlide();
+    });
+
     // Event listeners
-    nextButton.addEventListener('click', () => updateSlide('next'));
-    prevButton.addEventListener('click', () => updateSlide('prev'));
+    nextButton.addEventListener('click', () => {
+        stopAutoSlide();
+        updateSlide('next');
+        startAutoSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        stopAutoSlide();
+        updateSlide('prev');
+        startAutoSlide();
+    });
 
     // Dot navigation
     document.querySelectorAll('.dot').forEach((dot, index) => {
         dot.addEventListener('click', () => {
+            stopAutoSlide();
+
             projectContainers[currentSlide].classList.remove('active');
             document.querySelectorAll('.dot')[currentSlide].classList.remove('active');
 
@@ -121,11 +181,30 @@ document.addEventListener('DOMContentLoaded', function () {
             containerWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
             projectContainers[currentSlide].classList.add('active');
             document.querySelectorAll('.dot')[currentSlide].classList.add('active');
+
+            startAutoSlide();
         });
     });
 
-    // Automatic sliding
-    setInterval(() => {
-        updateSlide('next');
-    }, 3000); // Change slide every 3 seconds
+    // Pause auto-slide when tab is not visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopAutoSlide();
+        } else {
+            startAutoSlide();
+        }
+    });
+
+    // Start auto-slide
+    startAutoSlide();
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
