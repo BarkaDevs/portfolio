@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Navbar functionality
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarNav = document.querySelector('.navbar-nav');
     const openIcon = document.querySelector('.open-icon');
