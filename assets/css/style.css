@@ -515,9 +515,7 @@ body {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(
-        -10px
-      ); /* Smaller wave amplitude for very small screens */
+      transform: translateY(-10px);
     }
   }
 }
@@ -527,6 +525,21 @@ body {
   background: var(--secondary-color);
   padding: 4rem 2rem;
   text-align: center;
+}
+
+.team .social-icons {
+  margin-top: 10px;
+}
+
+.team .social-icons a {
+  color: #333;
+  margin: 0 5px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.team .social-icons a:hover {
+  color: var(--light-color);
 }
 
 .team h2 {
