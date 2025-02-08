@@ -395,6 +395,133 @@ body {
   }
 }
 
+.tech-stack h2 {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--light-accent-color);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.tech-stack-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Zigzag effect */
+.tech-icon:nth-child(odd) {
+  transform: translateY(-20px);
+}
+
+.tech-icon:nth-child(even) {
+  transform: translateY(20px);
+}
+
+/* Optional: Add animation for a waving effect */
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.tech-icon {
+  animation: wave 3s infinite ease-in-out;
+}
+
+.tech-icon:nth-child(even) {
+  animation-delay: 1.5s; /* Stagger the animation for even items */
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Smaller wave amplitude for mobile */
+  }
+}
+
+.tech-icon {
+  animation: wave 3s infinite ease-in-out;
+}
+
+.tech-icon:nth-child(even) {
+  animation-delay: 1.5s; /* Stagger the animation for even items */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .tech-stack h2 {
+    font-size: 1.75rem; /* Even smaller font size for very small screens */
+  }
+
+  .tech-stack-container {
+    gap: 20px; /* Further reduce gap for very small screens */
+    margin-bottom: 2rem;
+  }
+
+  .tech-icon {
+    width: 40px; /* Even smaller size for very small screens */
+    height: 40px; /* Even smaller size for very small screens */
+  }
+
+  .tech-icon img {
+    width: 25px; /* Even smaller icon size for very small screens */
+    height: 25px; /* Even smaller icon size for very small screens */
+  }
+
+  /* Reduce wave amplitude for very small screens */
+  .tech-icon:nth-child(odd) {
+    transform: translateY(-5px);
+  }
+
+  .tech-icon:nth-child(even) {
+    transform: translateY(5px);
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(
+        -10px
+      ); /* Smaller wave amplitude for very small screens */
+    }
+  }
+}
+
 /* TEAM */
 .team {
   background: var(--secondary-color);
