@@ -1,6 +1,6 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  background: #00024d;
+  background: #f8f9fd;
   color: #fff;
   margin: 0;
   padding: 20px;
@@ -23,7 +23,7 @@ body {
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
-  background-color: #fff;
+  background-color: #00024d;
 }
 
 .profile-info h1 {
@@ -31,8 +31,12 @@ body {
   font-size: 24px;
 }
 
+.profile-info {
+  color: #111;
+}
+
 .location {
-  color: #fff;
+  color: #111;
   margin: 5px 0;
   font-size: 0.8rem;
 }
@@ -48,21 +52,21 @@ body {
 }
 
 .btn {
-  padding: 8px 20px;
-  border-radius: 6px;
+  padding: 8px 30px;
+  border-radius: 10px;
   font-weight: 500;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: #fff;
-  color: #000;
+  background: #00024d;
+  color: #fff;
   border: none;
 }
 
 .btn-secondary {
   background: transparent;
-  color: #fff;
+  color: #00024d;
   border: 1px solid #333;
 }
 
