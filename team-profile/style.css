@@ -131,3 +131,36 @@ body {
   border-radius: 4px;
   font-size: 12px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info h1 {
+    font-size: 20px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    gap: 5px;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .section .experience {
+    height: auto;
+  }
+}
