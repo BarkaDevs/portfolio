@@ -1175,7 +1175,7 @@ body {
     padding: 1.5rem 1rem;
     margin-top: 0;
     gap: 1rem;
-    order: 2; /* Move text content below image */
+    order: 2;
   }
 
   #project-title {
