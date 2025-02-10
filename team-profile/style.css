@@ -84,16 +84,26 @@ body {
   margin-bottom: 20px;
 }
 
+.section-title h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
 .about p {
   line-height: 1.5rem;
   font-size: 0.9rem;
+  color: #ddd;
 }
 
 .tech-stack {
   display: flex;
+
   flex-direction: column;
   flex-wrap: wrap;
   gap: 8px;
+  height: 350px;
 }
 
 .tech-tag {
@@ -104,14 +114,21 @@ body {
   font-size: 14px;
 }
 
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .section .experience {
-  height: 383px;
+  height: auto;
 }
 
 .experience-item {
   margin-bottom: 20px;
   padding-left: 20px;
   position: relative;
+  color: #ddd;
 }
 
 .experience-item::before {
@@ -121,7 +138,7 @@ body {
   top: 8px;
   width: 8px;
   height: 8px;
-  background: #fff;
+  background: #4a9fff;
   border-radius: 50%;
 }
 
@@ -132,7 +149,69 @@ body {
   font-size: 12px;
 }
 
-/* Responsive Styles */
+.connect .contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.connect .contact-info > div {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.connect span {
+  font-weight: bold;
+  color: #4a9fff;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.connect .email p,
+.connect .speaking-engagements p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.schedule-link,
+.get-in-touch,
+.social-icon,
+.membership-link {
+  color: #4a9fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.schedule-link:hover,
+.get-in-touch:hover,
+.social-icon:hover,
+.membership-link:hover {
+  color: #6bb6ff;
+}
+
+.social-icons,
+.membership-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.membership-links {
+  flex-direction: column;
+}
+
+.social-icons .social-icon,
+.membership-links .membership-link {
+  background-color: #2a2a2a;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -160,7 +239,36 @@ body {
     text-align: center;
   }
 
-  .section .experience {
-    height: auto;
+  .connect .contact-info {
+    grid-template-columns: 1fr;
   }
+}
+
+.footer {
+  background: linear-gradient(0deg, #00024d 0%, #000000 100%);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #626161;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #4a9fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #6bb6ff;
 }
