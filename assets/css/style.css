@@ -1227,13 +1227,13 @@ body {
 .member-info a {
   color: #fff;
   text-decoration: none;
-
 }
 .popup-container {
-  position: fixed;  /* Changed from relative to fixed */
-  bottom: 20px;    /* Distance from bottom */
-  right: 20px;     /* Distance from right */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   display: inline-block;
+  z-index: 9999;
 }
 
 .popup-button {
@@ -1242,7 +1242,7 @@ body {
   gap: 8px;
   padding: 10px 20px;
   background-color: var(--light-color);
-  color:var(--dark-color);
+  color: var(--dark-color);
   border: none;
   border-radius: 40px;
   cursor: pointer;
@@ -1258,21 +1258,21 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px;
   border-radius: 4px;
-  z-index: 1;
-  bottom: 125%;    /* Changed from top to bottom */
-  right: 0;        /* Align with right side of button */
+  z-index: 1001;
+  bottom: 125%; /* Changed from top to bottom */
+  right: 0; /* Align with right side of button */
   transform: none; /* Removed the X-axis transform */
   transition: 1s;
 }
 
 .popup-content::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 100%;         /* Changed from bottom to top */
-  right: 20px;       /* Position arrow near right side */
+  top: 100%; /* Changed from bottom to top */
+  right: 20px; /* Position arrow near right side */
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
