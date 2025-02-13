@@ -1229,11 +1229,10 @@ body {
   text-decoration: none;
 }
 .popup-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  position: fixed; /* Changed from relative to fixed */
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
   display: inline-block;
-  z-index: 9999;
 }
 .popup {
   /* Remove position: relative since we want fixed positioning */
@@ -1242,10 +1241,10 @@ body {
 
 .popup-container {
   position: fixed; /* Fixed position relative to viewport */
-  bottom: 20px;   /* Distance from bottom */
-  right: 20px;    /* Distance from right */
-  z-index: 1000;  /* High z-index to stay above other content */
-  animation: floating 3s ease-in-out infinite; 
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  z-index: 1000; /* High z-index to stay above other content */
+  animation: floating 3s ease-in-out infinite;
 }
 
 .popup-button {
@@ -1255,47 +1254,17 @@ body {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-<<<<<<< HEAD
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  border: none;
-  border-radius: 40px;
-=======
   border: 2px solid var(--primary-color);
   background: white;
->>>>>>> 1db4083bd69944c43ff564e0df63bf9e8d1fd442
   cursor: pointer;
   border-radius: 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .popup-content {
   position: absolute;
-<<<<<<< HEAD
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px;
-  border-radius: 4px;
-  z-index: 1001;
-  bottom: 125%; /* Changed from top to bottom */
+  bottom: 100%; /* Position above the button */
   right: 0; /* Align with right side of button */
-  transform: none; /* Removed the X-axis transform */
-  transition: 1s;
-}
-
-.popup-content::before {
-  content: '';
-  position: absolute;
-  top: 100%; /* Changed from bottom to top */
-  right: 20px; /* Position arrow near right side */
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #f9f9f9 transparent transparent transparent; /* Modified for downward arrow */
-=======
-  bottom: 100%;    /* Position above the button */
-  right: 0;        /* Align with right side of button */
   margin-bottom: 10px; /* Space between button and popup */
   z-index: 1;
   background: white;
@@ -1307,21 +1276,12 @@ body {
   min-width: 200px; /* Ensure popup has minimum width */
   white-space: nowrap; /* Prevent text wrapping */
   transform: none;
->>>>>>> 1db4083bd69944c43ff564e0df63bf9e8d1fd442
 }
 
 /* Show popup content when container is hovered */
 .popup-container:hover .popup-content {
   display: block;
 }
-<<<<<<< HEAD
-.popup-button img {
-  vertical-align: middle;
-  margin-right: 8px; /* Adds some space between icon and text */
-  height: 25px;
-  width: 25px;
-}
-=======
 .popup-container:hover {
   animation-play-state: paused;
 }
@@ -1336,4 +1296,3 @@ body {
     transform: translateY(0);
   }
 }
->>>>>>> 1db4083bd69944c43ff564e0df63bf9e8d1fd442
