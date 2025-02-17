@@ -328,18 +328,19 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 6rem;
-  min-height: 500px; /* Set minimum height for the container */
+  min-height: 500px;
 }
 
-.left-section {
-  flex: 1; /* Equal width */
-  height: 100%; /* Full height */
+.left-section,
+.right-section {
+  flex: 1;
+  height: 100%;
 }
 
 .left-section img {
   width: 100%;
   border-radius: 16px;
-  object-fit: cover; /* Ensures image covers the full area without distortion */
+  object-fit: cover;
 }
 
 .right-section {
