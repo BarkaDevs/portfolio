@@ -283,9 +283,7 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .notes-container {
-    padding: 1rem;
-  }
+  
 }
 
 @media (max-width: 1200px) {
