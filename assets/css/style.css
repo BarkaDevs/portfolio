@@ -1253,62 +1253,79 @@ body {
   color: #fff;
   text-decoration: none;
 }
-.popup-container {
-  position: fixed; /* Changed from relative to fixed */
-  bottom: 20px; /* Distance from bottom */
-  right: 20px; /* Distance from right */
-  display: inline-block;
-}
-.popup {
-  /* Remove position: relative since we want fixed positioning */
-  width: auto;
-}
 
 .popup-container {
-  position: fixed; /* Fixed position relative to viewport */
-  bottom: 20px; /* Distance from bottom */
-  right: 20px; /* Distance from right */
-  z-index: 1000; /* High z-index to stay above other content */
+  position: fixed; /* Fixes it on the screen */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  z-index: 1000; /* Ensures it's above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   animation: floating 3s ease-in-out infinite;
 }
 
+/* Styles the button */
 .popup-button {
-  position: relative;
-  z-index: 2;
+  background: white;
+  border: 2px solid var(--dark-color);
+  color: var(--dark-color);
+  padding: 12px 18px;
+  border: 2px solid var(--dark-color);
+  border-radius: 30px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  border: 2px solid var(--primary-color);
-  background: white;
-  cursor: pointer;
-  border-radius: 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
+/* Adjusts the size of the icon */
+.popup-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Popup message styling */
 .popup-content {
   position: absolute;
-  bottom: 100%; /* Position above the button */
-  right: 0; /* Align with right side of button */
-  margin-bottom: 10px; /* Space between button and popup */
-  z-index: 1;
-  background: white;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  box-shadow: 2px 2px 10px var(--dark-color);
-  display: none;
-  min-width: 200px; /* Ensure popup has minimum width */
-  white-space: nowrap; /* Prevent text wrapping */
-  transform: none;
+  background: #fff;
+  color: var(--dark-color);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px var(--primary-color);
+  bottom: 70px; /* Positions it above the button */
+  right: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  max-width: 230px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 14px;
 }
 
-/* Show popup content when container is hovered */
-.popup-container:hover .popup-content {
-  display: block;
+/* Adds a small arrow below the popup */
+.popup-arrow {
+  position: absolute;
+  bottom: -10px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
 }
-.popup-container:hover {
-  animation-play-state: paused;
+
+/* Shows the popup on hover */
+.popup-container:hover .popup-content {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 @keyframes floating {
   0% {

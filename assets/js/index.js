@@ -207,3 +207,24 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('scrolled');
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("typing-text");
+    const message = "Are you a student needing academic support?\nWe can cater that also.";
+    let index = 0;
+
+    function typeText() {
+        if (index < message.length) {
+            textElement.innerHTML += message.charAt(index);
+            index++;
+            setTimeout(typeText, 50); // Typing speed
+        }
+    }
+
+    document.querySelector(".popup-container").addEventListener("mouseenter", function () {
+        textElement.innerHTML = ""; // Reset text
+        index = 0;
+        typeText(); // Start typing effect
+    });
+});
