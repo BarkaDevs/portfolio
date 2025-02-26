@@ -272,6 +272,31 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.back-button i {
+  font-size: 14px;
+}
+
 @media (max-width: 1024px) {
   .notes-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -282,8 +307,6 @@ body {
   .notes-grid {
     grid-template-columns: 1fr;
   }
-
-  
 }
 
 @media (max-width: 1200px) {

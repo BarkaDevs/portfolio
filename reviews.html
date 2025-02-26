@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .testimonial-card {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            padding-left: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .blue-accent {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 70%;
+            background: #1e3a8a;
+            border-radius: 4px;
+        }
+
+        .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            flex-grow: 1;
+        }
+
+        .client-name {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .client-designation {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-text {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .review-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .rating-input {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 0.25rem;
+        }
+
+        .rating-input input[type="radio"] {
+            display: none;
+        }
+
+        .rating-input label {
+            color: #ddd;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .rating-input label:hover,
+        .rating-input label:hover ~ label,
+        .rating-input input[type="radio"]:checked ~ label {
+            color: #ffd700;
+        }
+
+        .add-review-btn {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-review-btn:hover {
+            background-color: #1e40af;
+        }
+
+        .submit-review {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-review:hover {
+            background-color: #1e40af;
+        }
+
+        .image-preview {
+            max-width: 100px;
+            max-height: 100px;
+            margin-top: 0.5rem;
+            border-radius: 50%;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .testimonial-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2rem 1.5rem;
+            }
+
+            .blue-accent {
+                height: 8px;
+                width: 70%;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonials-header">
+            <h2>What Clients Say</h2>
+        </div>
+
+        <div id="testimonials-grid" class="testimonials-grid">
+            <!-- Reviews will be dynamically inserted here -->
+        </div>
+
+        <button class="add-review-btn" onclick="openModal()">Leave a Review</button>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Leave a Review</h2>
+            <form class="review-form" id="reviewForm" onsubmit="submitReview(event)">
+                <div class="form-group">
+                    <label for="name">Name (Optional)</label>
+                    <input type="text" id="name" placeholder="Enter your name or 'Anonymous'">
+                </div>
+                <div class="form-group">
+                    <label for="company">Organization/Company (Optional)</label>
+                    <input type="text" id="company" placeholder="Enter your organization">
+                </div>
+                <div class="form-group">
+                    <label>Rating*</label>
+                    <div class="rating-input">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review">Your Review*</label>
+                    <textarea id="review" required placeholder="Share your experience..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Profile Image (Optional)</label>
+                    <input type="file" id="image" accept="image/*" onchange="previewImage(event)">
+                    <img id="imagePreview" class="image-preview" src="" alt="Preview">
+                </div>
+                <button type="submit" class="submit-review">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Initialize reviews array with sample data
+        let reviews = [
+            {
+                name: 'John Doe',
+                company: 'Tech Solutions Inc.',
+                rating: 5,
+                review: 'Excellent service and professional team. They delivered our project on time and exceeded expectations.',
+                image: '/api/placeholder/60/60',
+                date: new Date('2024-02-15')
+            }
+        ];
+
+        // Function to render stars
+        function getStars(rating) {
+            return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+        }
+
+        // Function to render all reviews
+        function renderReviews() {
+            const grid = document.getElementById('testimonials-grid');
+            grid.innerHTML = '';
+
+            if (reviews.length === 0) {
+                grid.innerHTML = '<div class="no-reviews">No reviews yet. Be the first to leave a review!</div>';
+                return;
+            }
+
+            reviews.sort((a, b) => b.date - a.date);
+
+            reviews.forEach(review => {
+                const card = document.createElement('div');
+                card.className = 'testimonial-card';
+                card.innerHTML = `
+                    <div class="blue-accent"></div>
+                    <div class="client-image">
+                        <img src="${review.image}" alt="${review.name}">
+                    </div>
+                    <div class="testimonial-content">
+                        <h3 class="client-name">${review.name || 'Anonymous'}</h3>
+                        ${review.company ? `<p class="client-designation">${review.company}</p>` : ''}
+                        <div class="rating">${getStars(review.rating)}</div>
+                        <p class="review-text">${review.review}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Function to preview uploaded image
+        function previewImage(event) {
+            const preview = document.getElementById('imagePreview');
+            const file = event.target.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Function to handle image upload
+        function handleImageUpload(file) {
+            return new Promise((resolve) => {
+                if (!file) {
+                    resolve('/api/placeholder/60/60');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = (e) => resolve(e.target.result);
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Function to submit review
+        async function submitReview(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('reviewForm');
+            const imageFile = document.getElementById('image').files[0];
+            
+            const imageUrl = await handleImageUpload(imageFile);
+            
+            const newReview = {
+                name: document.getElementById('name').value.trim() || 'Anonymous',
+                company: document.getElementById('company').value.trim(),
+                rating: parseInt(form.rating.value),
+                review: document.getElementById('review').value.trim(),
+                image: imageUrl,
+                date: new Date()
+            };
+
+            reviews.unshift(newReview);
+            localStorage.setItem('testimonials', JSON.stringify(reviews));
+            
+            renderReviews();
+            closeModal();
+            form.reset();
+            document.getElementById('imagePreview').style.display = 'none';
+        }
+
+        function openModal() {
+            document.getElementById('reviewModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('reviewModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('reviewModal')) {
+                closeModal();
+            }
+        }
+
+        // Load reviews from localStorage on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedReviews = localStorage.getItem('testimonials');
+            if (savedReviews) {
+                reviews = JSON.parse(savedReviews);
+                reviews.forEach(review => review.date = new Date(review.date));
+            }
+            renderReviews();
+        });
+    </script>
+</body>
+</html>
