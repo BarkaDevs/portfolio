@@ -244,15 +244,15 @@ body {
   width: 360px;
   color: #fff;
   text-align: center;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .header-image {
   max-width: 840px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  left: 50%; 
-  transform: translateX(-50%); 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .header-image img {
@@ -517,11 +517,6 @@ body {
     padding: 30px 15px;
   }
 
-  .tech-stack-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
   .tech-card {
     padding: 20px 10px;
   }
@@ -538,33 +533,8 @@ body {
 
   .tech-card p {
     font-size: 12px;
-    color: #fff;
+    color: #666;
     margin: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .tech-stack-container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 12px;
-  }
-
-  .tech-card {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .tech-card img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .tech-card h3 {
-    font-size: 18px;
-  }
-
-  .tech-card p {
-    font-size: 14px;
   }
 }
 
@@ -611,7 +581,8 @@ body {
   aspect-ratio: 1;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease,
+    box-shadow 0.3s ease;
   transform-origin: center;
 }
 
