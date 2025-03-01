@@ -758,7 +758,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -773,7 +773,6 @@ body {
   align-items: center;
   gap: 3rem;
   transition: transform 0.3s ease;
-  position: relative;
   z-index: 1;
 }
 
