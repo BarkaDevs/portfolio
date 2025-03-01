@@ -1,13 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarNav = document.querySelector('.navbar-nav');
     const openIcon = document.querySelector('.open-icon');
     const closeIcon = document.querySelector('.close-icon');
 
+    // Mobile menu toggle
     navbarToggler.addEventListener('click', function () {
         navbarNav.classList.toggle('show');
         openIcon.style.display = openIcon.style.display === 'none' ? 'block' : 'none';
         closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Close menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarNav.classList.remove('show');
+            openIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        });
+    });
+
+    // Change navbar background on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 
     // Team members functionality
@@ -198,17 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startAutoSlide();
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-
+// Typing text effect
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
     const message = "Are you a student needing academic support?\nWe can cater that also.";

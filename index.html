@@ -1,686 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BarkaDevs</title>
-    <link rel="icon" href="assets/images/logoV2.png" type="image/png" />
-    <link rel="icon" href="assets/images/logoV2.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <span class="navbar-toggler">
-        <img
-          src="assets/images/icon/drawer.png"
-          alt="Open Menu"
-          class="open-icon"
-        />
-        <img
-          src="assets/images/icon/close.png"
-          alt="Close Menu"
-          class="close-icon"
-          style="display: none"
-        />
-      </span>
 
-      <ul class="navbar-nav">
-        <a class="navbar-brand" href="#"> BarkaDevs </a>
-        <div class="nav-links-container">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </div>
-        <li class="nav-item btn-item">
-          <a
-            class="btn"
-            href="https://calendly.com/keyanandydelgado/free-consultation"
-            >Book a Call
-            <span>→</span>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BarkaDevs</title>
+  <link rel="icon" href="assets/images/logoV2.png" type="image/png" />
+  <link rel="icon" href="assets/images/logoV2.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">BarkaDevs</a>
+    <span class="navbar-toggler">
+      <img src="assets/images/icon/bars.png" alt="Open Menu" class="open-icon" />
+      <img src="assets/images/icon/close (1).png" alt="Close Menu" class="close-icon" style="display: none" />
+    </span>
+
+    <ul class="navbar-nav">
+      <div class="nav-links-container">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">HOME</a>
         </li>
-      </ul>
-    </nav>
-    <section id="home" class="home">
-      <div class="hero">
-        <div class="tagline">
-          <p>
-            Helping you turn ideas into reality. We help you build and develop
-            websites, web apps, mobile apps, custom software solutions, and
-            more.
-          </p>
-        </div>
-        <div class="header-image">
-          <img src="assets/images/header.png" alt="header-image" />
-        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </li>
       </div>
-    </section>
-    <section class="popup">
-      <div class="popup-container">
-        <button class="popup-button" onclick="window.location.href='pricing.html'">
-          <img src="assets/images/icon/student-icon.png" alt="" />Are you a student?
-        </button>
-        <div class="popup-content">
-          <span id="typing-text"></span>
-  
-          <div class="popup-arrow"></div>
-        </div>
+      <li class="btn-item">
+        <a class="btn book-call" href="https://calendly.com/keyanandydelgado/free-consultation">Book A Call →</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="home" class="home">
+    <div class="hero">
+      <div class="tagline">
+        <p>
+          Helping you turn ideas into reality. We help you build and develop
+          websites, web apps, mobile apps, custom software solutions, and
+          more.
+        </p>
       </div>
-    </section>
+      <div class="header-image">
+        <img src="assets/images/header.png" alt="header-image" />
+      </div>
+    </div>
+  </section>
+  <section class="popup">
+    <div class="popup-container">
+      <button class="popup-button" onclick="window.location.href='pricing.html'">
+        <img src="assets/images/icon/student-icon.png" alt="" />Are you a student?
+      </button>
+      <div class="popup-content">
+        <span id="typing-text"></span>
 
-    <section id="tech-stack" class="tech-stack">
-      <div class="tech-stack-content">
-        <div class="left-section">
-          <img src="assets/images/daftpunktocat-thomas.gif" alt="Person coding" class="coding-image" />
-        </div>
-        <div class="right-section">
-          <h2 class="title">Our tech stack that gets <span>the job done</span></h2>
-          <div class="tech-stack-container">
-            <div class="tech-card">
-              <img src="assets/images/icon/html (1).png" alt="HTML" />
-              <h3>HTML</h3>
-              <p>Structure for web content</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/css-3 (1).png" alt="CSS3" />
-              <h3>CSS3</h3>
-              <p>Styling and layout</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/png-transparent-tailwind-css-hd-logo-removebg-preview.png" alt="Tailwind CSS" />
-              <h3>Tailwind CSS</h3>
-              <p>Utility-first CSS framework</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/bootstrap (1).png" alt="Bootstrap" />
-              <h3>Bootstrap</h3>
-              <p>Front-end component library</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/php.png" alt="PHP" />
-              <h3>PHP</h3>
-              <p>Server-side scripting</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/Laravel.svg.png" alt="Laravel" />
-              <h3>Laravel</h3>
-              <p>PHP framework for web artisans</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/nodejs (1).png" alt="Node.js" />
-              <h3>Node.js</h3>
-              <p>JavaScript runtime for server-side</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/js (1).png" alt="JavaScript" />
-              <h3>JavaScript</h3>
-              <p>Dynamic web interactions</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/flutter-removebg-preview.png" alt="Flutter" />
-              <h3>Flutter</h3>
-              <p>Cross-platform mobile development</p>
-            </div>
-            <div class="tech-card">
-              <img src="assets/images/icon/firebase.png" alt="Firebase" />
-              <h3>Firebase</h3>
-              <p>Backend services and databases</p>
-            </div>
-          </div>
-        </div>
+        <div class="popup-arrow"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="about">
+  <section id="tech-stack" class="tech-stack">
+    <div class="tech-stack-content">
       <div class="left-section">
-        <img src="assets/images/about-image.jpg" alt="about-image" />
+        <img src="assets/images/daftpunktocat-thomas.gif" alt="Person coding" class="coding-image" />
       </div>
       <div class="right-section">
-        <h2 class="about-title"><span>BARKADEVS</span> - Team History</h2>
-        <h2 class="sub-title">(where did it all start)</h2>
-        <p>
-          BarkaDevs started as a group of IT students at SEAIT, led by Keyan
-          Andy Delgado. Brought together by a shared passion for web
-          development, we decided to team up and call ourselves BarkaDevs. What
-          began as late-night problem-solving sessions and brainstorming ideas
-          turned into a team focused on building real-world digital solutions.
+        <h2 class="title">Our tech stack that gets <span>the job done</span></h2>
+        <div class="tech-stack-container">
+          <div class="tech-card">
+            <img src="assets/images/icon/html (1).png" alt="HTML" />
+            <h3>HTML</h3>
+            <p>Structure for web content</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/css-3 (1).png" alt="CSS3" />
+            <h3>CSS3</h3>
+            <p>Styling and layout</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/png-transparent-tailwind-css-hd-logo-removebg-preview.png"
+              alt="Tailwind CSS" />
+            <h3>Tailwind CSS</h3>
+            <p>Utility-first CSS framework</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/bootstrap (1).png" alt="Bootstrap" />
+            <h3>Bootstrap</h3>
+            <p>Front-end component library</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/php.png" alt="PHP" />
+            <h3>PHP</h3>
+            <p>Server-side scripting</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/Laravel.svg.png" alt="Laravel" />
+            <h3>Laravel</h3>
+            <p>PHP framework for web artisans</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/nodejs (2).png" alt="Node.js" />
+            <h3>Node.js</h3>
+            <p>JavaScript runtime for server-side</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/js (1).png" alt="JavaScript" />
+            <h3>JavaScript</h3>
+            <p>Dynamic web interactions</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/flutter-removebg-preview.png" alt="Flutter" />
+            <h3>Flutter</h3>
+            <p>Cross-platform mobile development</p>
+          </div>
+          <div class="tech-card">
+            <img src="assets/images/icon/firebase.png" alt="Firebase" />
+            <h3>Firebase</h3>
+            <p>Backend services and databases</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="left-section">
+      <img src="assets/images/about-image.jpg" alt="about-image" />
+    </div>
+    <div class="right-section">
+      <h2 class="about-title"><span>BARKADEVS</span> - Team History</h2>
+      <h2 class="sub-title">(where did it all start)</h2>
+      <p>
+        BarkaDevs started as a group of IT students at SEAIT, led by Keyan
+        Andy Delgado. Brought together by a shared passion for web
+        development, we decided to team up and call ourselves BarkaDevs. What
+        began as late-night problem-solving sessions and brainstorming ideas
+        turned into a team focused on building real-world digital solutions.
+      </p>
+      <p>
+        We take pride in turning code into functional, meaningful websites.
+        Guided by Keyan, we value teamwork, innovation, and the joy of
+        creating impactful projects.
+      </p>
+      <p>
+        More than just a team, BarkaDevs is a community built on shared growth
+        and a passion for technology. We thrive on collaboration and embrace
+        the challenges of web development, always striving to make technology
+        work for people.
+      </p>
+      <p>
+        Joining BarkaDevs means being part of a story of continuous learning,
+        creativity, and purpose-driven development.
+      </p>
+    </div>
+  </section>
+
+  <section id="project" class="project">
+    <h2 class="title">Check out our latest work</h2>
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />App
+          Development</span>
+        <h3 id="project-title">Jobility</h3>
+        <p id="project-description">
+          Jobility is a job finder app designed specifically for
+          differently-abled persons. It helps users find suitable job
+          opportunities, providing a platform that caters to their unique
+          needs and abilities.
         </p>
-        <p>
-          We take pride in turning code into functional, meaningful websites.
-          Guided by Keyan, we value teamwork, innovation, and the joy of
-          creating impactful projects.
+
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+        <div class="tech-icons">
+          <img src="assets/images/icon/flutter-removebg-preview.png" alt="Tech 1" />
+          <img src="assets/images/icon/nodejs (1).png" alt="Tech 2" />
+          <img src="assets/images/icon/firebase.png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/473558717_1110898807016341_8052412223173589519_n.jpg" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />Web
+          Development</span>
+        <h3 id="project-title">TB Patient Appointment System</h3>
+        <p id="project-description">
+          The TB Patient Appointment System is designed to streamline the
+          scheduling and management of appointments for tuberculosis patients.
+          It ensures efficient and organized appointment handling, improving
+          patient care and clinic operations.
         </p>
-        <p>
-          More than just a team, BarkaDevs is a community built on shared growth
-          and a passion for technology. We thrive on collaboration and embrace
-          the challenges of web development, always striving to make technology
-          work for people.
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+
+        <div class="tech-icons">
+          <img src="assets/images/icon/html (1).png" alt="Tech 1" />
+          <img src="assets/images/icon/php.png" alt="Tech 2" />
+          <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/tpas.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />App
+          Development</span>
+        <h3 id="project-title">LearnAble</h3>
+        <p id="project-description">
+          LearnAble is a learning platform designed for teachers and
+          differently-abled persons. It provides resources and tools to
+          facilitate inclusive education, ensuring that everyone has access to
+          quality learning opportunities.
         </p>
-        <p>
-          Joining BarkaDevs means being part of a story of continuous learning,
-          creativity, and purpose-driven development.
+
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+
+        <div class="tech-icons">
+          <img src="assets/images/icon/flutter-removebg-preview.png" alt="Tech 2" />
+          <img src="assets/images/icon/php.png" alt="Tech 2" />
+          <img src="assets/images/icon/firebase.png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/image.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />Web
+          Development</span>
+        <h3 id="project-title">SKeynected - SK Profiling System</h3>
+        <p id="project-description">
+          SKeynected is a profiling system designed to manage and organize
+          information for SK members. It provides a comprehensive platform for
+          tracking member details, activities, and contributions, ensuring
+          efficient and effective management.
         </p>
+
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+
+        <div class="tech-icons">
+          <img src="assets/images/icon/html (1).png" alt="Tech 2" />
+          <img src="assets/images/icon/php.png" alt="Tech 2" />
+          <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/SKEYNECTD.png" srcset="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />Web
+          Development</span>
+        <h3 id="project-title">FindDocSEAIT - Document Tracking System</h3>
+        <p id="project-description">
+          FindDocSEAIT is a document tracking system designed to streamline
+          the management and tracking of documents within SEAIT. It ensures
+          efficient handling, tracking, and retrieval of documents, improving
+          overall organizational workflow.
+        </p>
+
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+
+        <div class="tech-icons">
+          <img src="assets/images/icon/html (1).png" alt="Tech 2" />
+          <img src="assets/images/icon/php.png" alt="Tech 2" />
+          <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/dts.png" srcset="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="left-section">
+        <span id="project-type"><img src="assets/images/icon/code 1.png" alt="" style="width: 30px" />Web
+          Development</span>
+        <h3 id="project-title">
+          FindMyBhouse - Boarding House Finder Web App
+        </h3>
+        <p id="project-description">
+          FindMyBhouse is a web application designed to help users find
+          suitable boarding houses. It provides detailed information, reviews,
+          and ratings to ensure users can make informed decisions about their
+          accommodation options.
+        </p>
+
+        <div class="bottom-section">
+          <span id="view-docs">View Documentation
+            <img src="assets/images/icon/right-up (1) 1.png" alt="" style="width: 30px" /></span>
+        </div>
+
+        <div class="tech-icons">
+          <img src="assets/images/icon/physics.png" alt="Tech 2" />
+          <img src="assets/images/icon/nodejs (1).png" alt="Tech 2" />
+          <img src="assets/images/icon/png-transparent-tailwind-css-hd-logo-removebg-preview.png" alt="Tech 3" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="project-image">
+          <img src="assets/images/FindMyBhouse.png" srcset="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="team">
+    <h2>Who we are as a Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/images/team/471933441_1812381576188999_4352904413167383348_n-removebg-preview.png"
+          alt="Team member" style="width: 180px" />
+        <div class="member-info">
+          <a href="team-profile/keyan.html">
+            <h3>Keyan Andy Delgado</h3>
+            <p>Lead Full-Stack Developer</p>
+          </a>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/team/jener.png" alt="Team member" />
+        <div class="member-info">
+          <a href="team-profile/Ogatis.html">
+            <h3>Jener Kevin Ogatis</h3>
+          </a>
+          <p>Lead Frontend Developer</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/team/nico.png" alt="Team member" style="width: 230px" />
+        <div class="member-info">
+          <h3>Lynch Nico Futolan</h3>
+          <p>UI/UX Designer</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/team/juneil.png" alt="Team member" />
+        <div class="member-info">
+          <h3>Juneil Sulpico Junggay</h3>
+          <p>Frontend Developer</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/team/zoren.png" alt="Team member" style="width: 380px" />
+        <div class="member-info">
+          <h3>Zoren Empal</h3>
+          <p>Sales Representative</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="assets/images/team/jimbo.png" alt="Team member" />
+        <div class="member-info">
+          <h3>Jimbo Ulama</h3>
+          <p>Member</p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-buttons">
+      <button class="see-more-btn">See more members</button>
+      <a href="https://discord.gg/GxYJJYRx" target="_blank">
+        <button class="join-us-btn">
+          Join Us
+          <img src="assets/images/icon/swag (1).png" alt="" class="swag" />
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section id="services" class="container">
+    <section class="services">
+      <h2 class="section-title">Service we offer</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/images/icon/programming.png" alt="Web Development Icon" />
+          </div>
+          <h3>Web Development</h3>
+          <p class="description">
+            We create modern and responsive websites, ensuring a seamless user
+            experience. Our expertise allows us to build secure and dynamic
+            back-end systems, while enabling fast and interactive front-end
+            and server-side applications.
+          </p>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/images/icon/website.png" alt="App Development Icon" />
+          </div>
+          <h3>App Development</h3>
+          <p class="description">
+            Our app development services focus on creating high-quality
+            cross-platform mobile applications using Flutter. We integrate
+            Firebase to provide real-time database functionality, secure
+            authentication, and cloud services for smooth and reliable app
+            performance.
+          </p>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <img src="assets/images/icon/documentation (1).png" alt="Documentation Icon" />
+          </div>
+          <h3>Documentation</h3>
+          <p class="description">
+            We offer professional documentation services, including thesis
+            writing, project reports, and other detailed and well-structured
+            documents tailored to meet academic and business requirements.
+          </p>
+          <button class="learn-more-btn">Learn more</button>
+        </div>
       </div>
     </section>
 
-    <section id="project" class="project">
-      <h2 class="title">Check out our latest work</h2>
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />App Development</span
-          >
-          <h3 id="project-title">Jobility</h3>
-          <p id="project-description">
-            Jobility is a job finder app designed specifically for
-            differently-abled persons. It helps users find suitable job
-            opportunities, providing a platform that caters to their unique
-            needs and abilities.
-          </p>
-
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
-          <div class="tech-icons">
-            <img
-              src="assets/images/icon/flutter-removebg-preview.png"
-              alt="Tech 1"
-            />
-            <img src="assets/images/icon/nodejs (1).png" alt="Tech 2" />
-            <img src="assets/images/icon/firebase.png" alt="Tech 3" />
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img
-              src="assets/images/473558717_1110898807016341_8052412223173589519_n.jpg"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </div>
+    <div class="consultation-container">
+      <div class="consultation-box">
+        <h2>Not sure where to start?</h2>
+        <p>
+          We can schedule a free consultation, identify your requirements, and
+          discuss on how we'll build your next idea together.
+        </p>
       </div>
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />Web Development</span
-          >
-          <h3 id="project-title">TB Patient Appointment System</h3>
-          <p id="project-description">
-            The TB Patient Appointment System is designed to streamline the
-            scheduling and management of appointments for tuberculosis patients.
-            It ensures efficient and organized appointment handling, improving
-            patient care and clinic operations.
-          </p>
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
+    </div>
 
-          <div class="tech-icons">
-            <img src="assets/images/icon/html (1).png" alt="Tech 1" />
-            <img src="assets/images/icon/php.png" alt="Tech 2" />
-            <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
-          </div>
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <div class="contact-left">
+          <h2>Lets make something great together</h2>
+          <a href="https://calendly.com/keyanandydelgado/free-consultation" style="text-decoration: none"><button
+              class="book-call-btn">
+              Book a call <span>→</span>
+            </button></a>
         </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img src="assets/images/tpas.png" alt="" srcset="" />
-          </div>
-        </div>
-      </div>
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />App Development</span
-          >
-          <h3 id="project-title">LearnAble</h3>
-          <p id="project-description">
-            LearnAble is a learning platform designed for teachers and
-            differently-abled persons. It provides resources and tools to
-            facilitate inclusive education, ensuring that everyone has access to
-            quality learning opportunities.
-          </p>
-
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
-
-          <div class="tech-icons">
-            <img
-              src="assets/images/icon/flutter-removebg-preview.png"
-              alt="Tech 2"
-            />
-            <img src="assets/images/icon/php.png" alt="Tech 2" />
-            <img src="assets/images/icon/firebase.png" alt="Tech 3" />
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img src="assets/images/image.png" alt="" srcset="" />
-          </div>
-        </div>
-      </div>
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />Web Development</span
-          >
-          <h3 id="project-title">SKeynected - SK Profiling System</h3>
-          <p id="project-description">
-            SKeynected is a profiling system designed to manage and organize
-            information for SK members. It provides a comprehensive platform for
-            tracking member details, activities, and contributions, ensuring
-            efficient and effective management.
-          </p>
-
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
-
-          <div class="tech-icons">
-            <img src="assets/images/icon/html (1).png" alt="Tech 2" />
-            <img src="assets/images/icon/php.png" alt="Tech 2" />
-            <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img src="assets/images/SKEYNECTD.png" srcset="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />Web Development</span
-          >
-          <h3 id="project-title">FindDocSEAIT - Document Tracking System</h3>
-          <p id="project-description">
-            FindDocSEAIT is a document tracking system designed to streamline
-            the management and tracking of documents within SEAIT. It ensures
-            efficient handling, tracking, and retrieval of documents, improving
-            overall organizational workflow.
-          </p>
-
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
-
-          <div class="tech-icons">
-            <img src="assets/images/icon/html (1).png" alt="Tech 2" />
-            <img src="assets/images/icon/php.png" alt="Tech 2" />
-            <img src="assets/images/icon/bootstrap (1).png" alt="Tech 3" />
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img src="assets/images/dts.png" srcset="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="project-container">
-        <div class="left-section">
-          <span id="project-type"
-            ><img
-              src="assets/images/icon/code 1.png"
-              alt=""
-              style="width: 30px"
-            />Web Development</span
-          >
-          <h3 id="project-title">
-            FindMyBhouse - Boarding House Finder Web App
-          </h3>
-          <p id="project-description">
-            FindMyBhouse is a web application designed to help users find
-            suitable boarding houses. It provides detailed information, reviews,
-            and ratings to ensure users can make informed decisions about their
-            accommodation options.
-          </p>
-
-          <div class="bottom-section">
-            <span id="view-docs"
-              >View Documentation
-              <img
-                src="assets/images/icon/right-up (1) 1.png"
-                alt=""
-                style="width: 30px"
-            /></span>
-          </div>
-
-          <div class="tech-icons">
-            <img src="assets/images/icon/physics.png" alt="Tech 2" />
-            <img src="assets/images/icon/nodejs (1).png" alt="Tech 2" />
-            <img
-              src="assets/images/icon/png-transparent-tailwind-css-hd-logo-removebg-preview.png"
-              alt="Tech 3"
-            />
-          </div>
-        </div>
-        <div class="right-section">
-          <div class="project-image">
-            <img src="assets/images/FindMyBhouse.png" srcset="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="team">
-      <h2>Who we are as a Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img
-            src="assets/images/team/471933441_1812381576188999_4352904413167383348_n-removebg-preview.png"
-            alt="Team member"
-            style="width: 180px"
-          />
-          <div class="member-info">
-            <a href="team-profile/keyan.html">
-              <h3>Keyan Andy Delgado</h3>
-              <p>Lead Full-Stack Developer</p>
-            </a>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="assets/images/team/jener.png" alt="Team member" />
-          <div class="member-info">
-            <a href="team-profile/Ogatis.html"><h3>Jener Kevin Ogatis</h3></a>
-            <p>Lead Frontend Developer</p>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-member">
-          <img
-            src="assets/images/team/nico.png"
-            alt="Team member"
-            style="width: 230px"
-          />
-          <div class="member-info">
-            <h3>Lynch Nico Futolan</h3>
-            <p>UI/UX Designer</p>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="assets/images/team/juneil.png" alt="Team member" />
-          <div class="member-info">
-            <h3>Juneil Sulpico Junggay</h3>
-            <p>Frontend Developer</p>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-member">
-          <img
-            src="assets/images/team/zoren.png"
-            alt="Team member"
-            style="width: 380px"
-          />
-          <div class="member-info">
-            <h3>Zoren Empal</h3>
-            <p>Sales Representative</p>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="assets/images/team/jimbo.png" alt="Team member" />
-          <div class="member-info">
-            <h3>Jimbo Ulama</h3>
-            <p>Member</p>
-            <div class="social-icons">
-              <a href="https://instagram.com" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://facebook.com" target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a href="https://github.com" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="team-buttons">
-        <button class="see-more-btn">See more members</button>
-        <a href="https://discord.gg/GxYJJYRx" target="_blank">
-          <button class="join-us-btn">
-            Join Us
-            <img src="assets/images/icon/swag (1).png" alt="" class="swag" />
-          </button>
-        </a>
-      </div>
-    </section>
-
-    <section id="services" class="container">
-      <section class="services">
-        <h2 class="section-title">Service we offer</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <img
-                src="assets/images/icon/programming.png"
-                alt="Web Development Icon"
-              />
-            </div>
-            <h3>Web Development</h3>
-            <p class="description">
-              We create modern and responsive websites, ensuring a seamless user
-              experience. Our expertise allows us to build secure and dynamic
-              back-end systems, while enabling fast and interactive front-end
-              and server-side applications.
-            </p>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <img
-                src="assets/images/icon/website.png"
-                alt="App Development Icon"
-              />
-            </div>
-            <h3>App Development</h3>
-            <p class="description">
-              Our app development services focus on creating high-quality
-              cross-platform mobile applications using Flutter. We integrate
-              Firebase to provide real-time database functionality, secure
-              authentication, and cloud services for smooth and reliable app
-              performance.
-            </p>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <img
-                src="assets/images/icon/documentation (1).png"
-                alt="Documentation Icon"
-              />
-            </div>
-            <h3>Documentation</h3>
-            <p class="description">
-              We offer professional documentation services, including thesis
-              writing, project reports, and other detailed and well-structured
-              documents tailored to meet academic and business requirements.
-            </p>
-            <button class="learn-more-btn">Learn more</button>
-          </div>
-        </div>
-      </section>
-
-      <div class="consultation-container">
-        <div class="consultation-box">
-          <h2>Not sure where to start?</h2>
+        <div class="contact-right">
           <p>
-            We can schedule a free consultation, identify your requirements, and
-            discuss on how we'll build your next idea together.
+            We help you build and develop websites, web apps, mobile apps,
+            custom software solutions, and more.
           </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61571358846172" class="social-link facebook">
+              <img src="assets/images/icon/facebook.png" alt="Facebook" />
+              Facebook
+            </a>
+            <a href="" class="social-link discord">
+              <img src="assets/images/icon/discord.png" alt="Discord" />
+              Discord
+            </a>
+            <a href="barkadevszxc@gmail.com" class="social-link email">
+              <img src="assets/images/icon/gmail-logo.png" alt="Email" />
+              Email
+            </a>
+          </div>
         </div>
       </div>
-
-      <section id="contact" class="contact">
-        <div class="contact-content">
-          <div class="contact-left">
-            <h2>Lets make something great together</h2>
-            <a
-              href="https://calendly.com/keyanandydelgado/free-consultation"
-              style="text-decoration: none"
-              ><button class="book-call-btn">
-                Book a call <span>→</span>
-              </button></a
-            >
-          </div>
-          <div class="contact-right">
-            <p>
-              We help you build and develop websites, web apps, mobile apps,
-              custom software solutions, and more.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://www.facebook.com/profile.php?id=61571358846172"
-                class="social-link facebook"
-              >
-                <img src="assets/images/icon/facebook.png" alt="Facebook" />
-                Facebook
-              </a>
-              <a href="" class="social-link discord">
-                <img src="assets/images/icon/discord.png" alt="Discord" />
-                Discord
-              </a>
-              <a href="barkadevszxc@gmail.com" class="social-link email">
-                <img src="assets/images/icon/gmail-logo.png" alt="Email" />
-                Email
-              </a>
-            </div>
-          </div>
-        </div>
-        <footer class="footer">
-          <nav class="footer-nav">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#contact">CONTACT</a>
-          </nav>
-          <p class="copyright"> 2025 BarkaDevs. All rights reserved.</p>
-        </footer>
-      </section>
+      <footer class="footer">
+        <nav class="footer-nav">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#services">SERVICES</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+        <p class="copyright"> 2025 BarkaDevs. All rights reserved.</p>
+      </footer>
     </section>
+  </section>
 
-    <script src="assets/js/index.js"></script>
-  </body>
+  <script src="assets/js/index.js"></script>
+</body>
+
 </html>
