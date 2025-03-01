@@ -240,18 +240,19 @@ body {
 }
 
 .tagline p {
-  font-size: 30px;
-  width: 400px;
+  font-size: 25px;
+  width: 360px;
   color: #fff;
   text-align: center;
+  margin: 0 auto; 
 }
-
 .header-image {
   max-width: 840px;
   width: 100%;
   position: absolute;
-  left: 360px;
-  bottom: 0px;
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .header-image img {
@@ -300,6 +301,8 @@ body {
   .header-image {
     position: static;
     width: 100%;
+    transform: none; /* Remove transform since it's not absolutely positioned */
+    margin: 0 auto; /* Center the block element */
   }
 }
 
