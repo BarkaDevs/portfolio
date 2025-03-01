@@ -57,7 +57,8 @@ body {
 }
 
 .navbar.scrolled {
-  background: var(--linear-gradient); /* Glassy transparent white */
+  background: var(--linear-gradient);
+  /* Glassy transparent white */
   backdrop-filter: blur(10px);
 }
 
@@ -408,7 +409,8 @@ body {
   }
 
   .left-section img {
-    height: 400px; /* Fixed height for mobile */
+    height: 400px;
+    /* Fixed height for mobile */
   }
 
   .about-title {
@@ -454,12 +456,14 @@ body {
 .title {
   font-size: 30px;
   font-weight: bold;
-  color: var(--primary-color); /* Dark blue */
+  color: var(--primary-color);
+  /* Dark blue */
   margin-bottom: 20px;
 }
 
 .title span {
-  border-bottom: 2px solid var(--primary-color); /* Red underline for "the job done" */
+  border-bottom: 2px solid var(--primary-color);
+  /* Red underline for "the job done" */
 }
 
 .tech-stack-container {
@@ -491,7 +495,8 @@ body {
 .tech-card h3 {
   font-size: 18px;
   font-weight: bold;
-  color: var(--light-color); /* Dark blue */
+  color: var(--light-color);
+  /* Dark blue */
   margin-bottom: 5px;
 }
 
@@ -534,6 +539,7 @@ body {
     width: 100%;
   }
 }
+
 /* TEAM */
 .team {
   background: var(--secondary-color);
@@ -587,6 +593,7 @@ body {
   transform: scale(1.1);
   box-shadow: 0 0 5px 5px rgba(0, 85, 179, 0.5);
 }
+
 .team-member img {
   width: 80%;
   height: 80%;
@@ -651,6 +658,7 @@ body {
 .see-more-btn:hover {
   background-color: #003d80;
 }
+
 .see-more-btn {
   background-color: var(--light-accent-color);
   color: white;
@@ -834,10 +842,12 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -855,6 +865,7 @@ body {
     padding: 2rem;
     text-align: center;
   }
+
   .consultation-box p {
     width: 100%;
   }
@@ -970,13 +981,16 @@ body {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .contact-right p {
     text-align: center;
     width: 100%;
   }
+
   .book-call-btn {
     margin: 0 auto;
   }
+
   .social-links {
     justify-content: center;
     flex-wrap: wrap;
@@ -1019,8 +1033,8 @@ body {
   background: var(--secondary-color);
   display: flex;
   margin: 0 auto;
-  max-height: 700px;
-  max-width: 1300px;
+  max-height: 650px;
+  max-width: 1200px;
   gap: 7rem;
   border-radius: 50px;
 }
@@ -1032,12 +1046,14 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+
 #project-type {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1rem;
 }
+
 #project-type img {
   width: 30px;
   height: 30px;
@@ -1046,6 +1062,7 @@ body {
 #project-title {
   font-size: 2.75rem;
 }
+
 #project-description {
   line-height: 1.75rem;
   display: block;
@@ -1061,6 +1078,7 @@ body {
   width: 30px;
   height: 30px;
 }
+
 #view-docs {
   display: flex;
   align-items: center;
@@ -1073,7 +1091,7 @@ body {
 .project-image img {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 550px;
   object-fit: fill;
   margin-top: 100px;
   border-top-left-radius: 50px;
@@ -1095,6 +1113,12 @@ body {
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
+}
+
+
+.project .left-section,
+.project .right-section {
+  flex: 1;
 }
 
 .project-container {
@@ -1244,10 +1268,14 @@ body {
 }
 
 .popup-container {
-  position: fixed; /* Fixes it on the screen */
-  bottom: 20px; /* 20px from the bottom */
-  right: 20px; /* 20px from the right */
-  z-index: 1000; /* Ensures it's above other elements */
+  position: fixed;
+  /* Fixes it on the screen */
+  bottom: 20px;
+  /* 20px from the bottom */
+  right: 20px;
+  /* 20px from the right */
+  z-index: 1000;
+  /* Ensures it's above other elements */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -1284,7 +1312,8 @@ body {
   padding: 12px;
   border-radius: 8px;
   box-shadow: 5px 5px 20px var(--primary-color);
-  bottom: 70px; /* Positions it above the button */
+  bottom: 70px;
+  /* Positions it above the button */
   right: 10px;
   white-space: nowrap;
   opacity: 0;
@@ -1316,13 +1345,17 @@ body {
   transform: translateY(0);
   visibility: visible;
 }
+
 @keyframes floating {
   0% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-10px); /* Button floats up 10px */
+    transform: translateY(-10px);
+    /* Button floats up 10px */
   }
+
   100% {
     transform: translateY(0);
   }
